@@ -462,6 +462,56 @@ body {
   transform: translateX(10px);
 }
 
+/* Second Section of Specialties */
+.briefs-two__box {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.briefs-two__box .intro-text {
+  font-size: 52px;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.each-service {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "service-img service-txt";
+  grid-gap: 3.5rem;
+  margin-bottom: 8rem;
+}
+
+.service-image {
+  grid-area: service-img;
+}
+
+.service-desc {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  grid-area: service-txt;
+}
+
+.service-desc h2 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.service-desc p {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.service-link {
+  color: var(--alternative-link-color);
+}
+
+.service-link:hover {
+  text-decoration: underline;
+}
+
 /*-------- Media Queries --------*/
 
 @media screen and (max-width: 1099px) {
@@ -509,7 +559,11 @@ body {
   }
 
   .each-brief__text {
-    padding: 1.5rem 0;
+    padding: 1.5rem 1rem;
+  }
+
+  .each-brief__image {
+    padding: 0 0.5rem;
   }
 
   .each-brief img {
@@ -517,12 +571,37 @@ body {
   }
 
   .brief-img {
-    outline: 3px solid yellow;
+    /* outline: 3px solid yellow; */
   }
 }
 
 @media screen and (max-width: 599px) {
   .landing-content {
     margin: 0 1rem;
+  }
+
+  .content-wrapper {
+    width: 100%;
+  }
+
+  .each-brief {
+    width: 90%;
+  }
+
+  .briefs-two__box {
+    width: 90%;
+  }
+
+  .each-service {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "service-img"
+      "service-txt";
+    grid-gap: 3rem;
+  }
+
+  .service-heading,
+  .service-para {
+    margin-bottom: 2rem;
   }
 }
