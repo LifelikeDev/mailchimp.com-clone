@@ -1,6 +1,7 @@
 /*-------- Variables --------*/
 :root {
   --primary-bg-color: #fff;
+  --secondary-bg-color: #f6f6f4;
 
   --header-primary-color: #ffe01b;
   --topmost-form-bg: #403b3b;
@@ -58,8 +59,25 @@ img {
 .content-wrapper {
   /* border: 3px solid blue; */
   margin: 0 auto;
-  padding: 8rem 0 4rem;
+  padding: 7rem 0 7rem;
   width: 1099px;
+}
+
+.content-heading {
+  font-size: 52px;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+
+.sub-content__heading {
+  color: var(--primary-text-color);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.sub-content__wrapper {
+  margin: 0 auto;
+  width: 85%;
 }
 
 .nav-btn {
@@ -399,7 +417,7 @@ body {
 }
 
 .briefs-box {
-  /* outline: 3px solid brown; */
+  outline: 3px solid brown;
   margin: 2rem auto;
 }
 
@@ -415,16 +433,20 @@ body {
   width: 85%;
 }
 
-.each-brief__text,
+/* .each-brief__text,
 .each-brief__image {
-  /* outline: 2px solid blueviolet; */
-}
+  outline: 2px solid blueviolet;
+} */
 
 .each-brief__text {
   display: flex;
   flex-direction: column;
   justify-content: center;
   grid-area: text;
+}
+
+.each-brief__text h2 {
+  color: var(--link-text-color);
 }
 
 .each-brief__image img {
@@ -437,8 +459,6 @@ body {
 }
 
 .each-brief__text h2 {
-  font-size: 34px;
-  font-weight: 500;
   margin-bottom: 20px;
 }
 
@@ -464,12 +484,10 @@ body {
 
 /* Second Section of Specialties */
 .briefs-two__box {
-  margin: 0 auto;
-  width: 85%;
+  outline: 3px solid red;
 }
 
 .briefs-two__box .intro-text {
-  font-size: 52px;
   font-weight: 500;
   margin-bottom: 3rem;
 }
@@ -494,11 +512,6 @@ body {
   grid-area: service-txt;
 }
 
-.service-desc h2 {
-  font-size: 32px;
-  font-weight: 500;
-}
-
 .service-desc p {
   font-size: 16px;
   line-height: 1.4;
@@ -510,6 +523,192 @@ body {
 
 .service-link:hover {
   text-decoration: underline;
+}
+
+/*--------- Customer Section ---------*/
+.section-customers {
+  background-color: var(--secondary-bg-color);
+}
+
+.customer-content {
+  text-align: center;
+}
+
+.customer-content h2 {
+  margin-bottom: 1rem;
+}
+
+.customer-content p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.logos-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.each-brand {
+  /* outline: 2px solid blue; */
+  padding: 2rem 2.5rem;
+  margin: 0 1rem 1rem;
+}
+
+.brand-logo img {
+  height: 75px;
+  width: 85px;
+}
+
+p.brand-text {
+  font-size: 16px;
+  margin: 20px 10px 10px;
+}
+
+/*-------- Achievements Section --------*/
+.achievements-wrapper {
+  margin: 0 auto;
+  width: 85%;
+}
+
+.achievements-heading__box {
+  margin: 0 auto;
+  text-align: center;
+  width: 50%;
+}
+
+.achievements-description {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "award integrations directory";
+  grid-gap: 3rem;
+  margin: 0 auto;
+  width: 90%;
+}
+
+.each-achievement.first {
+  grid-area: award;
+}
+
+.each-achievement.second {
+  grid-area: integrations;
+}
+
+.each-achievement.third {
+  grid-area: directory;
+}
+
+.achievement {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 22rem;
+}
+
+.achievement-image {
+  cursor: pointer;
+  height: 10rem;
+  width: 75%;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-image img {
+  width: 100%;
+  height: 100%;
+}
+
+.achievement-heading {
+  cursor: pointer;
+  height: 5rem;
+  /* width: 75%;s */
+  margin-bottom: 1rem;
+}
+
+.each-achievement__heading {
+  font-family: var(--heading-font-family);
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.achievement-para {
+  font-weight: 300;
+  margin-bottom: 4rem;
+  /* padding: 0 2.5rem; */
+  line-height: 1.3;
+}
+
+.achievement-link {
+  display: block;
+  color: var(--alternative-link-color);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.achievement-link:hover {
+  text-decoration: underline;
+}
+
+.achievement-link__box {
+  width: 100%;
+}
+
+/*-------- Benefits Section --------*/
+.section-benefits {
+  background-color: #fbeeca;
+}
+
+.benefits-content {
+  width: 90%;
+}
+
+.benefits-heading__box {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 4rem;
+  width: 50%;
+}
+
+.benefits-wrapper {
+  margin: 8rem 0 5rem;
+}
+
+.each-benefit {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  /* outline: 4px solid darkgreen; */
+  padding: 0 1rem;
+  margin-bottom: 8rem;
+}
+
+.benefit-text {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  padding: 0 0 0 6.5rem;
+  line-height: 1.1;
+  /* outline: 3px solid red; */
+}
+
+.each-benefit.second .benefit-text {
+  padding: 0 6.5rem 0 0;
+}
+
+.benefit-text__heading {
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.benefit-text__paragraph {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.4;
 }
 
 /*-------- Media Queries --------*/
@@ -536,6 +735,15 @@ body {
 
   .content-wrapper {
     width: 95%;
+  }
+
+  .content-heading {
+    font-size: 48px;
+    padding: 0 1.5rem;
+  }
+
+  .intro-desc h2 {
+    font-size: 48px;
   }
 
   .landing-content {
@@ -570,8 +778,46 @@ body {
     height: 600px;
   }
 
-  .brief-img {
-    /* outline: 3px solid yellow; */
+  /* .logos-wrapper {
+    width: 100%;
+  } */
+
+  .brand-logo img {
+    height: 90%;
+    width: 100%;
+  }
+
+  .achievements-wrapper {
+    width: 100%;
+  }
+
+  .achievements-heading__box {
+    width: 80%;
+  }
+
+  .achievement-heading {
+    width: 75%;
+  }
+
+  .benefits-content {
+    width: 75%;
+  }
+
+  .each-benefit {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "benefit-image"
+      "benefit-text";
+    margin-bottom: 4rem;
+  }
+
+  .benefit-text {
+    grid-area: benefit-text;
+    padding: 0;
+  }
+
+  .benefit-image {
+    grid-area: benefit-image;
   }
 }
 
@@ -584,11 +830,16 @@ body {
     width: 100%;
   }
 
+  .content-heading,
+  .intro-desc h2 {
+    font-size: 40px;
+  }
+
   .each-brief {
     width: 90%;
   }
 
-  .briefs-two__box {
+  .sub-content__wrapper {
     width: 90%;
   }
 
@@ -603,5 +854,26 @@ body {
   .service-heading,
   .service-para {
     margin-bottom: 2rem;
+  }
+
+  .logos-wrapper {
+    flex-direction: column;
+  }
+
+  .each-brand {
+    padding: 1rem 2.5rem 0rem;
+  }
+
+  .brand-logo img {
+    height: 80%;
+    width: 60%;
+  }
+
+  .achievements-description {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "award"
+      "integrations"
+      "directory";
   }
 }
